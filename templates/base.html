@@ -1,0 +1,67 @@
+
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html ng-app="reviewApp" ng-controller="reviewController" ng-csp>
+  <head>
+    <meta charset="utf-8">
+    <title>ReviewDuk</title>
+  <!--
+    start : 2014-09-18 13:25
+                                   _           ____   ___
+      ___ __ _ _ __ _ __   ___  __| |_ __ ___ |___ \ / _ \
+     / __/ _` | '__| '_ \ / _ \/ _` | '_ ` _ \  __) | | | |
+    | (__ (_| | |  | |_) |  __/ (_| | | | | | |/ __/| |_| |
+     \___\__,_|_|  | .__/ \___|\__,_|_| |_| |_|_____|\___/
+                   |_|
+
+    end  : 2014-??-??
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css" rel="stylesheet">
+    <link href="{% static 'css/flat-ui.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/loading-bar.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <meta name="og:site_name" content="ReviewDuk"/>
+    <meta name="fb:page_id" content="" />
+    <meta name="og:image" content="https://raw.githubusercontent.com/carpedm20/reviewduk/master/static/img/reviewduk.png"/>
+
+    <meta name="og:title" content="ReviewDuk"/>
+    <meta name="og:description" content="세상의 모든 리뷰에서 감성을 찾다"/>
+    <meta name="og:url" content="http://pail.unist.ac.kr:8080/"/>
+
+  </head>
+
+  <body>
+    {% include 'nav.html' %}
+    {% block content%} {% endblock %}
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=776839839027483&version=v2.0";
+          fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/jquery.raty.js' %}"></script>
+    <script src="{% static 'js/Chart.min.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-animate.min.js"></script>
+    <script src="{% static 'js/angular-masonry.js' %}"></script>
+    <script src="{% static 'js/loading-bar.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+  </body>
+</html>
