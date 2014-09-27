@@ -72,6 +72,19 @@ p {
   position: relative;
 }
 
+#about {
+  height: 100% !important;
+  padding: 0 !important;
+  display: table;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
 .form-inline {
   display: inline !important;
 }
@@ -81,7 +94,7 @@ p {
 }
 
 #category {
-  width: 200px;
+  width: 150px;
 }
 
 .location-wrapper {
@@ -96,4 +109,7 @@ p {
   margin-top: 20px;
   width: 100%;
   padding: 30px;
+  background: #000;
+  background: rgba(0,0,0,0.6);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
 }
