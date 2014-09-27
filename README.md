@@ -1,11 +1,11 @@
-CodeDining
-==========
+FoodDuk
+=======
 
 Big data analysis for restaurant recommendation.
 
 This project is inspired by [DiningCode](http://www.diningcode.com/)
 
-*나는 원한다 빵집을*
+*나는 원한다 치킨을*
 
 
 Development History

@@ -1,102 +1,30 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  {% include 'intro.html' %}
-
-  <section id="demo">
-    <div class="well text-center">
+  <section id="hello" class="section" style="color: #fff; background-color: #25d3d2;">
+    <div class="section-body">
       <div class="container">
-        <h3>Enter any senetences</h3>
-        <div class="col-md-8 col-md-offset-2 col-xs-12 col-xs-offset-0 well" style="background-color:#fff; margin-bottom: 0px;">
-          <p>The progress bar means the sentiment of a sentence.<br/>The more a progress bar is filled, the more a sentence is positive</p>
-          <p>문장이 긍정적일수록 긍정바가 꽉 차게 됩니다 :)</p>
-          <div class="col-xs-12">
-            <label class="col-sm-4 col-xs-12">Very positive (매우 긍정)</label>
-            <div class="progress col-sm-8 col-xs-12">
-              <div class="progress-bar progress-bar-info" style="width: 100%;"></div>
-            </div>
-          </div>
-          <div class="col-xs-12">
-            <label class="col-sm-4 col-xs-12">Quite positive (다소 긍정)</label>
-            <div class="progress col-sm-8 col-xs-12">
-              <div class="progress-bar" style="width: 80%;"></div>
-            </div>
-          </div>
-          <div class="col-xs-12">
-            <label class="col-sm-4 col-xs-12">Neutral (보통)</label>
-            <div class="progress col-sm-8 col-xs-12">
-              <div class="progress-bar progress-bar-success" style="width: 60%;"></div>
-            </div>
-          </div>
-          <div class="col-xs-12">
-            <label class="col-sm-4 col-xs-12">Quite negative (다소 부정)</label>
-            <div class="progress col-sm-8 col-xs-12">
-              <div class="progress-bar progress-bar-warning" style="width: 40%;"></div>
-            </div>
-          </div>
-          <div class="col-xs-12">
-            <label class="col-sm-4 col-xs-12">very negative (매우 부정)</label>
-            <div class="progress col-sm-8 col-xs-12">
-              <div class="progress-bar progress-bar-danger" style="width: 20%;"></div>
-            </div>
-          </div>
-        </div>
-        <div class="media col-sm-8 col-sm-offset-2" style="padding-top: 10px; ">
-          <a class="pull-left" href="#">
-            <img class="media-object img-rounded" data-src="holder.js/64x64" alt="64x64" src="https://avatars3.githubusercontent.com/u/3346407?v=2&s=460" style="width: 64px; height: 64px;">
-          </a>
-          <div class="media-body">
-            <form ng-submit="prediction()">
-              <div class="form-group">
-                <textarea class="form-control" id="text" placeholder="문장을 입력하시고 '감정!'을 누르시면 문장의 긍정 부정을 예측합니다" style="resize: vertical;" rows="3"></textarea>
-              </div>
-              <div class="form-group">
-                <div class="pull-right">
-                  <button type="submit" class="btn btn-block btn-sm btn-primary">감정!</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="media col-sm-8 col-sm-offset-2">
-          <div class="panel panel-default" ng-repeat="sentence in sentences | reverse">
-            {% verbatim %}
-            <div class="panel-body">
-              {{ sentence.text }}
-            </div>
-            <div class="panel-footer">
-              <div class="row">
-                <label class="col-sm-3">예측 평가</label>
-                <div class="progress col-sm-8 col-sm-offset-0 col-xs-offset-1 col-xs-10">
-                  <div class="progress-bar"
-                       ng-class="{'progress-bar-danger': sentence.pred==1,
-                                  'progress-bar-warning': sentence.pred==2,
-                                  'progress-bar-success': sentence.pred==3,
-                                  'progress-bar-info': sentence.pred==5}"style="width: {{ sentence.pred*20 }}%;"></div>
-                </div>
-              </div>
-            </div>
-            {% endverbatim %}
-          </div>
+        <div class="row">
+          <h1>푸드덕</h1>
+          <p>빅데이터 맛집 검색: 나는 원한다 치킨을</p>
+          <hr class="intro-divider">
+          <div class="fb-like" data-href="http://pail.unist.ac.kr:8080/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
         </div>
       </div>
     </div>
+    <div class="bottom-search-area">
+      <div class="row">
+        <form action="#" id="search_form">
+          <div class="location-wrapper">
+            <input id="location" name="location" type="text" class="form-inline form-control" autocomplete="off" placeholder="어디에 가고 싶으세요?"><p id="enter_location_error_message" class="bad hide">
+                        지역을 설정해 주세요
+          </p></div>
+          <input type="text" id="category" class="form-inline form-control" name="checkin" placeholder="체크인">
+        </form>
+      </div>
+    </div>
+
   </section>
 
-  <section id="movie-demo">
-    <div class="container review-container">
-      <div class="row text-center">
-        <h3>Sentiment analysis for movie reviews</h3>
-        <p>영화 리뷰 감정 분석기</p>
-      </div>
-      <br/>
-      <div id="reviews" class="col-xs-12 col-md-12" style="padding: 0;">
-        <div class="review col-md-6 col-xs-12" ng-repeat="review in reviews" review-directive>
-          {% include 'review.html' %}
-        </div>
-      </div>
-    </div>
-  </section>
-  
   {% include 'footer.html' %}
 {% endblock %}
