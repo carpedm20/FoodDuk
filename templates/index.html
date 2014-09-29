@@ -2,13 +2,14 @@
 
 {% block content %}
   <section id="hello" class="section" style="color: #fff; background-color: #25d3d2;">
+    <div class="overlay"></div>
     <div class="section-body">
       <div class="container">
         <div class="row">
           <h1>푸드덕</h1>
           <p>빅데이터 맛집 검색: 나는 원한다 치킨을</p>
           <hr class="intro-divider">
-          <div class="fb-like" data-href="http://pail.unist.ac.kr:8080/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+          <div class="fb-like" data-href="http://pail.unist.ac.kr:8080/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" style="min-height: 30px"></div>
         </div>
       </div>
     </div>
@@ -16,11 +17,11 @@
       <div class="row">
         <form action="#" id="search_form">
           <div class="location-wrapper">
-            <input id="location" name="location" type="text" class="form-inline form-control" autocomplete="off" placeholder="어디에 가고 싶으세요?"><p id="enter_location_error_message" class="bad hide">
+            <input id="location" name="location" type="text" class="form-input form-inline form-control" autocomplete="off" placeholder="어디에 가고 싶으세요?"><p id="enter_location_error_message" class="bad hide">
                         지역을 설정해 주세요
           </p></div>
-          <input type="text" id="category" class="form-inline form-control" name="checkin" placeholder="체크인">
-          <input type="text" id="category" class="form-inline form-control" name="checkin" placeholder="체크인">
+          <input type="text" id="category" class="form-input form-inline form-control" name="checkin" placeholder="메뉴">
+          <button type="submit" id="search-btn" class="btn btn-info btn-lg form-inline" name="checkin">음식점 검색</button>
         </form>
       </div>
     </div>
@@ -31,13 +32,13 @@
     <div class="section-body">
       <div class="container">
         <div class="row">
-          <h2>What we build</h2>
-          <img src="http://designmodo.github.io/Flat-UI/docs/assets/img/demo/logo-mask.png">
-          <p>We are currently working on sentiment analysis technology with the aim of making context recognition<br/>easier for everyone by using the finest machine learning technology.</p>
+          <h3>Explore the Food</h3>
+          <p><small>See where people are eating, all around the world.</small></p>
         </div>
       </div>
     </div>
   </section>
 
+  <iframe scr="http://54.64.135.175:3000" frameborder="0" scrolling="yes" height=300></iframe>
   {% include 'footer.html' %}
 {% endblock %}

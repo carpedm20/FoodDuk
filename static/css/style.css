@@ -19,6 +19,10 @@ p {
   line-height: 1.6;
 }
 
+nav {
+  background-color: transparent !important;
+}
+
 .navbar-inverse .navbar-collapse {
   border-color: #fff !important;
 }
@@ -70,19 +74,16 @@ p {
   overflow: hidden;
   min-width: 1045px;
   position: relative;
+
+  background: url('http://graphics8.nytimes.com/images/2014/05/13/science/15recipehealth/15recipehealth-articleLarge.jpg') no-repeat;
+  background-size: 100%;
+
 }
 
 #about {
-  height: 100% !important;
-  padding: 0 !important;
-  display: table;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px !important;
 }
 
 .form-inline {
@@ -97,9 +98,22 @@ p {
   width: 150px;
 }
 
+#search-btn {
+  padding: 0 30px 0 30px;
+  height: 42px !important;
+  margin-right: -4px;
+  border-radius: 1px !important;
+}
+
 .location-wrapper {
   position: relative;
   display: inline-block;
+}
+
+.form-input {
+  margin-right: -4px;
+  border: 1px solid #dce0e0 !important;
+  border-radius: 1px !important;
 }
 
 .bottom-search-area {
@@ -112,4 +126,12 @@ p {
   background: #000;
   background: rgba(0,0,0,0.6);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+
+div.overlay {
+  opacity: .2;
+  background-color: rgba(0,0,0,0.3);
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
